@@ -90,69 +90,38 @@ operador = "";
 //end symbols
 
 //operacion
-//suma
-function operacion(valor, valor_actual, operacion){
-switch (operacion) {
-    case "+":
-        display_resultado.value = suma(valor, valor_actual);
-        break;  
 
-    default:
-        break;
-    }
-    }
-    function suma(valor1,valor2){
-    var resultado = (valor1 + valor2);
-    return resultado;
-}
-//resta
-function operacion(valor, valor_actual, operacion){
-    switch (operacion) {
-        case "-":
-            display_resultado.value = resta(valor, valor_actual);
-            break;  
-    
-        default:
-            break;
-    }
-    
-    }
-    
-    function resta(valor1,valor2){
-    var resultado = (valor1 - valor2);
-    return resultado;
-}
-//division
-function operacion(valor, valor_actual, operacion){
-    switch (operacion) {
-        case "/":
-            display_resultado.value = division(valor, valor_actual);
-            break;  
-    
-        default:
-            break;
-    }
-    
-    }
-    
-    function division(valor1,valor2){
-    var resultado = (valor1 / valor2);
-    return resultado;
-}
-//multiplicacion
 function operacion(valor, valor_actual, operacion){
     switch (operacion) {
         case "*":
             display_resultado.value = multiplicacion(valor, valor_actual);
             break;  
-    
-        default:
+        case "/":
+            display_resultado.value = division(valor, valor_actual);
+                break;
+        case "-":
+            display_resultado.value = resta(valor, valor_actual);
+            break;
+        case "+":
+            display_resultado.value = suma(valor, valor_actual);
             break;
     }
     
     }
     
-    function multiplicacion(valor1,valor2){
+function multiplicacion(valor1,valor2){
     var resultado = (valor1 * valor2);
+    return resultado;
+}
+function division(valor1,valor2){
+    var resultado = (valor1 / valor2);
+    return resultado;
+}
+function resta(valor1,valor2){
+    var resultado = (valor1 - valor2);
+    return resultado;
+}
+function suma(valor1,valor2){
+    var resultado = (valor1 + valor2);
     return resultado;
 }
